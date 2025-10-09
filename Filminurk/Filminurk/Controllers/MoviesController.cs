@@ -27,5 +27,11 @@ namespace Filminurk.Controllers
             });
             return View();
         }
+        [HttpGet]
+        public IActionResult Get() 
+        {
+            MoviesCreateViewModel result = new();
+            return View("Create", result);
+        }
     }
 }
