@@ -31,8 +31,6 @@ namespace Filminurk.Data.Migrations
                     b.Property<string>("Actors")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("CurrentRating")
-                        .HasColumnType("float");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -42,29 +40,15 @@ namespace Filminurk.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("EntryCreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("EntryModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateOnly>("FirstPublished")
-                        .HasColumnType("date");
-
-                    b.Property<int?>("Genre")
                         .HasColumnType("int");
 
-                    b.Property<bool?>("IsOnAdultSwim")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("Vulgar")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
 
                     b.ToTable("Movies");
                 });
